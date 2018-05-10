@@ -18,7 +18,7 @@ class CashRegister
   end
 
   def apply_discount
-    if self.discount == 0
+    if self.discount == 0 #the cash register was not initialized with an employee discount
       "There is no discount to apply."
     else
       self.total *= (self.discount.fdiv(100))
