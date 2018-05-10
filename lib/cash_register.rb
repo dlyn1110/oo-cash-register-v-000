@@ -19,7 +19,10 @@ class CashRegister
   end
 
   def apply_discount
-    
+    if self.discount == 0
+      "There is no discount to apply."
+    else 
+      self.total *= (1- self.discount.fdiv.(100))
   end
 
   def void_last_transaction
