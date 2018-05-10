@@ -1,5 +1,3 @@
-require 'pry'
-
 class CashRegister
   attr_accessor :total, :discount, :items, :last_transaction
 
@@ -8,7 +6,8 @@ class CashRegister
     @total = 0
     @discount = discount
     @items = []
- end
+
+  end
 
   def add_item(title, price, quantity = 1)
     self.total += price * quantity
@@ -22,12 +21,11 @@ class CashRegister
     if self.discount == 0
       "There is no discount to apply."
     else
-      self.total *= (1- self.discount.fdiv.(100))
+      self.total *= (1-self.discount.fdiv(100))
       "After the discount, the total comes to $#{self.total.to_i}."
-   end
- end
+    end
+  end
 
   def void_last_transaction
     self.total -= self.last_transaction
   end
-end
