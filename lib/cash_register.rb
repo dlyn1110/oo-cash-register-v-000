@@ -25,6 +25,7 @@ class CashRegister
       self.total *= (1- self.discount.fdiv.(100))
       "After the discount, the total comes to $#{self.total.to_i}"
   end
+end
 
   def void_last_transaction
     self.total -= self.last_transaction
