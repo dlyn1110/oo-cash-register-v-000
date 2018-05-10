@@ -21,7 +21,7 @@ class CashRegister
     if self.discount == 0
       "There is no discount to apply."
     else
-      self.total *= (1-self.discount.fdiv(100))
+      self.total *= (self.discount.fdiv(100))
       "After the discount, the total comes to $#{self.total.to_i}."
     end
   end
