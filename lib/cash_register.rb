@@ -23,6 +23,7 @@ class CashRegister
     else
       self.total *= (self.discount.fdiv(100))
       "After the discount, the total comes to $#{self.total.to_i}."
+      binding.pry
     end
   end
 
